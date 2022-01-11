@@ -108,6 +108,66 @@ h3 {
 .html {width: 90%; background-color:  #a9b3bc;}
 .css {width: 80%; background-color: #8c99a6;}
 .js {width: 65%; background-color: #596673;}
+
+
+
+
+
+@keyframes sheen {
+	 0% {
+		 transform: skewY(-45deg) translateX(0);
+	}
+	 100% {
+		 transform: skewY(-45deg) translateX(12.5em);
+	}
+}
+ .wrapper {
+	 display: block;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+}
+ .button {
+	 padding: 0.75em 2em;
+	 text-align: center;
+	 text-decoration: none;
+	 color: #2194e0;
+	 border: 2px solid #2194e0;
+	 font-size: 24px;
+	 display: inline-block;
+	 border-radius: 0.3em;
+	 transition: all 0.2s ease-in-out;
+	 position: relative;
+	 overflow: hidden;
+}
+ .button:before {
+	 content: "";
+	 background-color: rgba(255, 255, 255, 0.5);
+	 height: 100%;
+	 width: 3em;
+	 display: block;
+	 position: absolute;
+	 top: 0;
+	 left: -4.5em;
+	 transform: skewX(-45deg) translateX(0);
+	 transition: none;
+}
+ .button:hover {
+	 background-color: #2194e0;
+	 color: #fff;
+	 border-bottom: 4px solid #1977b5;
+}
+ .button:hover:before {
+	 transform: skewX(-45deg) translateX(13.5em);
+	 transition: all 0.5s ease-in-out;
+}
+ 
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -132,7 +192,9 @@ h3 {
 <div style="position:relative;">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
   <p>My Discord Bot Obijuan has a Lot of Fretures<br>Check it out Right now</p>
-  <a class="btn success" href="https://discord.com/oauth2/authorize?client_id=838670309590040587&permissions=8&scope=bot" target="_blank">Invite Me!</a>
+  <div class="wrapper">
+  <a href="https://discord.com/oauth2/authorize?client_id=838670309590040587&permissions=8&scope=bot" class="button" target="_blank">Invite Me!</a>
+  </div>
   </div>
 </div>
 
