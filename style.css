@@ -1,4 +1,4 @@
- .arrow{
+.arrow{
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -18,3 +18,46 @@
     line-height: 39px;
     cursor: pointer;
   }
+  .btn-neon{
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    color: white;
+    width: 180px;
+    transition: 1s;
+    transition-delay: .9s;
+    position: relative;
+    display: inline-block;
+}
+
+.btn-neon:hover{
+    box-shadow: 0 0 10px #2196f3,
+                0 0 40px #2196f3,
+                0 0 80px #2196f3;
+    background-color: #2196f3;
+}
+
+.btn-neon:hover polyline{
+    stroke-dashoffset: -460;
+}
+
+.btn-neon svg{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-neon svg polyline{
+    fill: transparent;
+    stroke: #2196f3;
+    stroke-width: 2px;
+    stroke-dasharray: 40 460;
+    stroke-dashoffset: 40;
+    transition:  .8s ease-in-out;
+}
