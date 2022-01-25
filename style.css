@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 .arrow{
     position: fixed;
     bottom: 30px;
@@ -60,4 +61,239 @@
     stroke-dasharray: 40 460;
     stroke-dashoffset: 40;
     transition:  .8s ease-in-out;
+}
+
+
+
+
+.skill-bars{
+  padding: 25px 30px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+  width: 90%;
+}
+.bar .progress-line.css span{
+  width: 60%;
+}
+.bar .progress-line.js span{
+  width: 85%;
+}
+.bar .progress-line.python span{
+  width: 50%;
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "90%";
+}
+.progress-line.css span::after{
+  content: "80%";
+}
+.progress-line.js span::after{
+  content: "65%";
+}
+.progress-line.python span::after{
+  content: "55%";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.invite{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.invite a
+{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #0f0;
+  margin: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #fff;
+  -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.invite a:hover
+{
+  transition-delay: 1.5s;
+  color: #282E34;
+  box-shadow: 0 0 10px #0f0,
+  0 0 20px #0f0,
+  0 0 40px #0f0,
+  0 0 80px #0f0,
+  0 0 160px #0f0;
+}
+
+
+.invite a span
+{
+  position: relative;
+  z-index: 100;
+}
+
+
+
+.invite a:nth-child(2)
+{
+  filter: hue-rotate(80deg);
+}
+
+.invite a::before
+{
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #0f0;
+  box-shadow: 5px -8px 0 #0f0,
+              5px 8px 0 #0f0;
+  transition: width 0.5s, left 0.5s, height 0.5s,
+  box-shadow 0.5s;
+  transition-delay: 1s,0.5s,0s,0s;
+}
+
+.invite a:hover::before
+{
+  width: 60%;
+  height: 105%;
+  left: -2px;
+  box-shadow: 5px 0 0 #0f0,
+              5px 0 0 #0f0;
+  transition-delay: 0s,0.5s,1s,1s;
+}
+
+
+
+
+.invite a::after
+{
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #0f0;
+  box-shadow: -5px -8px 0 #0f0,
+              -5px 8px 0 #0f0;
+  transition: width 0.5s, left 0.5s, height 0.5s,
+  box-shadow 0.5s;
+  transition-delay: 1s,0.5s,0s,0s;
+}
+
+.invite a:hover::after
+{
+  width: 60%;
+  height: 105%;
+  right: -2px;
+  box-shadow: -5px 0 0 #0f0,
+              -5px 0 0 #0f0;
+  transition-delay: 0s,0.5s,1s,1s;
 }
