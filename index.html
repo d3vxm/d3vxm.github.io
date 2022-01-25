@@ -79,27 +79,6 @@ h3 {
     background-attachment: scroll;
   }
 }
-.btn {
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* Green */
-.success {
-  border-color: #04AA6D;
-  background-color: #282E34;
-  color: green;
-}
-
-.success:hover {
-  background-color: #04AA6D;
-  color: white;
-}
 
 .container {
   border-radius: 25px;
@@ -115,9 +94,9 @@ h3 {
   color: white;
 }
 
-.html {width: 90%; background-color:  #2196f3;}
-.css {width: 80%; background-color: #2196f3;}
-.js {width: 65%; background-color: #2196f3;}
+.html {width: 90%; background-color:  #a9b3bc;}
+.css {width: 80%; background-color: #8c99a6;}
+.js {width: 65%; background-color: #596673;}
 
 
 
@@ -139,7 +118,6 @@ h3 {
 	 transform: translate(-50%, -50%);
 }
 
- 
 
 
 
@@ -176,14 +154,8 @@ h3 {
 <div style="position:relative;">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
   <p>My Discord Bot Obijuan has a Lot of Fretures<br>Check it out Right now</p>
-  <div class="wrapper">
-  <a href="https://discord.com/oauth2/authorize?client_id=838670309590040587&permissions=8&scope=bot" target="_blank" class="btn-neon">
-  Invite Me!
-  <svg height="50" width="180">
-    <polyline points="0,0 180,0 180,50 0,50 0,00">
-    </polyline>
-  </svg>
-</a>
+  <div class="invite">
+  <a href="https://discord.com/oauth2/authorize?client_id=838670309590040587&permissions=8&scope=bot" class="button" target="_blank"><span>Invite Me!</span></a>
   </div>
   </div>
 </div>
@@ -194,26 +166,41 @@ h3 {
   </div>
 </div>
 
-<div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>My Skills Are As Follows:-</p>
-  <p>HTML 90%</p>
-<div class="container">
-  <div class="skills html"></div>
-</div>
-
-<p>CSS 80%</p>
-<div class="container">
-  <div class="skills css"></div>
-</div>
-
-<p>JavaScript 65%</p>
-<div class="container">
-  <div class="skills js"></div>
-</div>
-
+  <div class="skill-bars">
+    <div class="bar">
+      <div class="info">
+        <span>HTML</span>
+      </div>
+      <div class="progress-line html">
+        <span></span>
+      </div>
+    </div>
+    <div class="bar">
+      <div class="info">
+        <span>CSS</span>
+      </div>
+      <div class="progress-line css">
+        <span></span>
+      </div>
+    </div>
+    <div class="bar">
+      <div class="info">
+        <span>Javascript</span>
+      </div>
+      <div class="progress-line js">
+        <span></span>
+      </div>
+    </div>
+    <div class="bar">
+      <div class="info">
+        <span>Python</span>
+      </div>
+      <div class="progress-line python">
+        <span></span>
+      </div>
+    </div>
+    </div>
   </div>
-</div>
 
 <div class="bgimg-1">
   <div class="caption">
